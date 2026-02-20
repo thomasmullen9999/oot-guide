@@ -1,0 +1,250 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Kokiri Sword",
+      "category": "Equipment",
+      "description": "The starting sword obtained in the Kokiri Forest from the small maze behind the training area."
+    },
+    {
+      "id": 2,
+      "name": "Deku Shield",
+      "category": "Equipment",
+      "description": "Purchase from the Kokiri Shop in the Kokiri Forest for 40 Rupees, or find it in various chests."
+    },
+    {
+      "id": 3,
+      "name": "Hylian Shield",
+      "category": "Equipment",
+      "description": "Purchase from the Bazaar in Castle Town or Kakariko Village as a child, or find it in a chest in the graveyard."
+    },
+    {
+      "id": 4,
+      "name": "Mirror Shield",
+      "category": "Equipment",
+      "description": "Found in the Spirit Temple as an adult. The Mirror Shield reflects light and deflects certain attacks."
+    },
+    {
+      "id": 5,
+      "name": "Master Sword",
+      "category": "Equipment",
+      "description": "The legendary sword that seals the darkness, obtained from the Temple of Time after collecting the three Spiritual Stones."
+    },
+    {
+      "id": 6,
+      "name": "Biggoron's Sword",
+      "category": "Equipment",
+      "description": "A two-handed sword that deals more damage than the Master Sword. Obtained through a trading sequence quest as an adult."
+    },
+    {
+      "id": 7,
+      "name": "Fairy Slingshot",
+      "category": "Equipment",
+      "description": "Obtained in the Great Deku Tree dungeon as a child. It allows you to shoot Deku Seeds at enemies and targets."
+    },
+    {
+      "id": 8,
+      "name": "Boomerang",
+      "category": "Equipment",
+      "description": "Found in Inside Jabu-Jabu’s Belly. The Boomerang stuns enemies and retrieves distant items as a child."
+    },
+    {
+      "id": 9,
+      "name": "Bombs",
+      "category": "Equipment",
+      "description": "Found in Dodongo’s Cavern. Bombs are used to blow up walls, obstacles, and enemies."
+    },
+    {
+      "id": 10,
+      "name": "Bombchu",
+      "category": "Equipment",
+      "description": "Small mechanical bombs that move along the ground and up walls. Can be won at the Bombchu Bowling Alley."
+    },
+    {
+      "id": 11,
+      "name": "Bow",
+      "category": "Equipment",
+      "description": "Found in the Forest Temple as an adult. It allows you to shoot arrows at enemies, targets, and switches."
+    },
+    {
+      "id": 12,
+      "name": "Hookshot",
+      "category": "Equipment",
+      "description": "Obtained in Kakariko Village after completing Dampé's graveyard race as an adult. Use it to grapple onto distant objects and enemies."
+    },
+    {
+      "id": 13,
+      "name": "Longshot",
+      "category": "Equipment",
+      "description": "An upgraded Hookshot with a longer reach. Found in the Water Temple."
+    },
+    {
+      "id": 14,
+      "name": "Megaton Hammer",
+      "category": "Equipment",
+      "description": "Found in the Fire Temple as an adult. The Megaton Hammer is used to smash obstacles and switches."
+    },
+    {
+      "id": 15,
+      "name": "Lens of Truth",
+      "category": "Equipment",
+      "description": "Found in the Bottom of the Well. It reveals hidden objects, paths, and enemies."
+    },
+    {
+      "id": 16,
+      "name": "Ocarina of Time",
+      "category": "Quest Item",
+      "description": "Given to you by Princess Zelda before fleeing Hyrule Castle. Used to play various melodies that affect the world."
+    },
+    {
+      "id": 17,
+      "name": "Magic Beans",
+      "category": "Quest Item",
+      "description": "Purchased from the Magic Bean salesman in Zora’s River. These beans can be planted as a child and grow into platforms as an adult."
+    },
+    {
+      "id": 18,
+      "name": "Spiritual Stone of Forest (Kokiri's Emerald)",
+      "category": "Quest Item",
+      "description": "Given by the Great Deku Tree after completing the Deku Tree dungeon. One of three Spiritual Stones needed to open the Door of Time."
+    },
+    {
+      "id": 19,
+      "name": "Spiritual Stone of Fire (Goron's Ruby)",
+      "category": "Quest Item",
+      "description": "Given by Darunia after completing Dodongo’s Cavern. One of three Spiritual Stones needed to open the Door of Time."
+    },
+    {
+      "id": 20,
+      "name": "Spiritual Stone of Water (Zora's Sapphire)",
+      "category": "Quest Item",
+      "description": "Given by Princess Ruto after rescuing her from Inside Jabu-Jabu’s Belly. One of three Spiritual Stones needed to open the Door of Time."
+    },
+    {
+      "id": 21,
+      "name": "Light Medallion",
+      "category": "Medallions",
+      "description": "Received from Rauru after pulling the Master Sword. One of six medallions obtained from the Sages."
+    },
+    {
+      "id": 22,
+      "name": "Forest Medallion",
+      "category": "Medallions",
+      "description": "Received from Saria after defeating Phantom Ganon in the Forest Temple. One of six medallions obtained from the Sages."
+    },
+    {
+      "id": 23,
+      "name": "Fire Medallion",
+      "category": "Medallions",
+      "description": "Received from Darunia after defeating Volvagia in the Fire Temple. One of six medallions obtained from the Sages."
+    },
+    {
+      "id": 24,
+      "name": "Water Medallion",
+      "category": "Medallions",
+      "description": "Received from Princess Ruto after defeating Morpha in the Water Temple. One of six medallions obtained from the Sages."
+    },
+    {
+      "id": 25,
+      "name": "Shadow Medallion",
+      "category": "Medallions",
+      "description": "Received from Impa after defeating Bongo Bongo in the Shadow Temple. One of six medallions obtained from the Sages."
+    },
+    {
+      "id": 26,
+      "name": "Spirit Medallion",
+      "category": "Medallions",
+      "description": "Received from Nabooru after defeating Twinrova in the Spirit Temple. One of six medallions obtained from the Sages."
+    },
+    {
+      "id": 27,
+      "name": "Goron’s Bracelet",
+      "category": "Upgrades",
+      "description": "Given by Darunia after playing Saria's Song. Allows you to lift Bomb Flowers."
+    },
+    {
+      "id": 28,
+      "name": "Silver Gauntlets",
+      "category": "Upgrades",
+      "description": "Found in the Spirit Temple as a child. Allows you to lift heavier objects as an adult."
+    },
+    {
+      "id": 29,
+      "name": "Golden Gauntlets",
+      "category": "Upgrades",
+      "description": "Found in Ganon’s Castle. Allows you to lift the heaviest objects in the game."
+    },
+    {
+      "id": 30,
+      "name": "Silver Scale",
+      "category": "Upgrades",
+      "description": "Won in the diving mini-game in Zora's Domain. Allows you to dive deeper underwater."
+    },
+    {
+      "id": 31,
+      "name": "Golden Scale",
+      "category": "Upgrades",
+      "description": "Win the adult fishing game with a large fish to get the Golden Scale, which lets you dive even deeper."
+    },
+    {
+      "id": 32,
+      "name": "Iron Boots",
+      "category": "Equipment",
+      "description": "Found in the Ice Cavern. The Iron Boots allow you to sink to the bottom of water areas."
+    },
+    {
+      "id": 33,
+      "name": "Hover Boots",
+      "category": "Equipment",
+      "description": "Found in the Shadow Temple. Hover Boots allow you to walk on air for a short time."
+    },
+    {
+      "id": 34,
+      "name": "Deku Nuts",
+      "category": "Equipment",
+      "description": "Found throughout the game, Deku Nuts stun enemies when thrown."
+    },
+    {
+      "id": 35,
+      "name": "Deku Sticks",
+      "category": "Equipment",
+      "description": "Found throughout the game as a child. They can be used as a temporary weapon or to light torches."
+    },
+    {
+      "id": 36,
+      "name": "Fire Arrows",
+      "category": "Arrows",
+      "description": "Shoot an arrow at the rising sun on Lake Hylia after completing the Water Temple to receive the Fire Arrows."
+    },
+    {
+      "id": 37,
+      "name": "Ice Arrows",
+      "category": "Arrows",
+      "description": "Found in the Gerudo Training Ground. Ice Arrows freeze enemies upon impact."
+    },
+    {
+      "id": 38,
+      "name": "Light Arrows",
+      "category": "Arrows",
+      "description": "Received from Zelda after collecting all six medallions. Light Arrows are used to defeat Ganondorf."
+    },
+    {
+      "id": 39,
+      "name": "Din's Fire",
+      "category": "Magic Spells",
+      "description": "Obtained from the Great Fairy in Hyrule Castle. Din’s Fire creates a powerful fire blast around Link."
+    },
+    {
+      "id": 40,
+      "name": "Farore's Wind",
+      "category": "Magic Spells",
+      "description": "Obtained from the Great Fairy in Zora’s Fountain. Farore’s Wind allows you to create warp points in dungeons."
+    },
+    {
+      "id": 41,
+      "name": "Nayru's Love",
+      "category": "Magic Spells",
+      "description": "Obtained from the Great Fairy in the Desert Colossus. Nayru’s Love creates a temporary protective barrier around Link."
+    }
+  ]
+}

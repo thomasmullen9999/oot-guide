@@ -1,0 +1,159 @@
+{
+  "locations": [
+    {
+      "id": 1,
+      "name": "Kokiri Forest",
+      "description": "The starting area of the game where Link lives. Home to the Kokiri and the Great Deku Tree."
+    },
+    {
+      "id": 2,
+      "name": "Great Deku Tree",
+      "description": "A large tree that serves as a guardian of the Kokiri Forest. The first dungeon of the game is located inside."
+    },
+    {
+      "id": 3,
+      "name": "Hyrule Field",
+      "description": "A vast open field that connects various locations in Hyrule. The main hub for travel in the game."
+    },
+    {
+      "id": 4,
+      "name": "Castle Town",
+      "description": "The main town in Hyrule, featuring shops, a market, and the castle where Princess Zelda resides."
+    },
+    {
+      "id": 5,
+      "name": "Hyrule Castle",
+      "description": "The castle where Princess Zelda lives, located near Castle Town. Link visits here early in the game."
+    },
+    {
+      "id": 6,
+      "name": "Death Mountain",
+      "description": "A volcanic mountain located north of Hyrule Field. Home to the Gorons and the Fire Temple."
+    },
+    {
+      "id": 7,
+      "name": "Goron City",
+      "description": "A city built within Death Mountain, home to the Goron tribe."
+    },
+    {
+      "id": 8,
+      "name": "Dodongo's Cavern",
+      "description": "A dungeon located inside Death Mountain, the second dungeon of the game."
+    },
+    {
+      "id": 9,
+      "name": "Zora's River",
+      "description": "A river that flows to Zora's Domain. Home to the Zoras and several mini-games."
+    },
+    {
+      "id": 10,
+      "name": "Zora's Domain",
+      "description": "The home of the Zoras, located in the northeast of Hyrule. A water-filled area that includes the Water Temple."
+    },
+    {
+      "id": 11,
+      "name": "Inside Jabu-Jabu's Belly",
+      "description": "The third dungeon of the game, located inside the giant fish, Lord Jabu-Jabu."
+    },
+    {
+      "id": 12,
+      "name": "Kakariko Village",
+      "description": "A village south of Death Mountain. Home to various NPCs and shops."
+    },
+    {
+      "id": 13,
+      "name": "Graveyard",
+      "description": "Located in Kakariko Village, the graveyard is home to several tombstones and Dampé the Gravekeeper."
+    },
+    {
+      "id": 14,
+      "name": "Bottom of the Well",
+      "description": "A mini-dungeon located in the Kakariko Village graveyard. Contains hidden secrets and treasures."
+    },
+    {
+      "id": 15,
+      "name": "Forest Temple",
+      "description": "The first adult dungeon located in the Sacred Forest. Contains the Forest Medallion."
+    },
+    {
+      "id": 16,
+      "name": "Lake Hylia",
+      "description": "A large body of water located south of Hyrule Field. Home to the Fishing Pond and several secrets."
+    },
+    {
+      "id": 17,
+      "name": "Water Temple",
+      "description": "The second adult dungeon located in Lake Hylia. Contains the Water Medallion."
+    },
+    {
+      "id": 18,
+      "name": "Gerudo Valley",
+      "description": "A desert area west of Hyrule Field, leading to the Gerudo Fortress and Gerudo Desert."
+    },
+    {
+      "id": 19,
+      "name": "Gerudo Fortress",
+      "description": "Home to the Gerudo tribe. A mini-dungeon that includes several stealth segments."
+    },
+    {
+      "id": 20,
+      "name": "Spirit Temple",
+      "description": "The third adult dungeon located in the Gerudo Desert. Contains the Spirit Medallion."
+    },
+    {
+      "id": 21,
+      "name": "Shadow Temple",
+      "description": "A dark and eerie dungeon located in Kakariko Village. Contains the Shadow Medallion."
+    },
+    {
+      "id": 22,
+      "name": "Ganon's Castle",
+      "description": "The final dungeon of the game, located in the center of Hyrule Field. Home to the final battle against Ganon."
+    },
+    {
+      "id": 23,
+      "name": "Temple of Time",
+      "description": "The sacred temple that holds the Master Sword and the Door of Time."
+    },
+    {
+      "id": 24,
+      "name": "Lost Woods",
+      "description": "A mystical forest filled with confusing paths. Leads to the Sacred Forest Meadow."
+    },
+    {
+      "id": 25,
+      "name": "Sacred Forest Meadow",
+      "description": "A peaceful area within the Lost Woods, home to Saria and the entrance to the Forest Temple."
+    },
+    {
+      "id": 26,
+      "name": "Desert Colossus",
+      "description": "A desert area leading to the Spirit Temple. Contains several secrets and mini-games."
+    },
+    {
+      "id": 27,
+      "name": "Haunted Wasteland",
+      "description": "A mysterious and eerie area south of Gerudo Valley. Home to the Requiem of Spirit song."
+    },
+    {
+      "id": 28,
+      "name": "Ice Cavern",
+      "description": "A cold dungeon located north of Zora's Domain. Contains several ice puzzles."
+    },
+    {
+      "id": 29,
+      "name": "Hyrule Castle Town Market",
+      "description": "The main shopping area in Castle Town, filled with shops, an inn, and several NPCs."
+    },
+    {
+      "id": 30,
+      "name": "Lon Lon Ranch",
+      "description": "A ranch located west of Hyrule Field. Home to cows, Epona, and several mini-games."
+    },
+    {
+      "id": 31,
+      "name": "Fishing Pond",
+      "description": "A pond located in Lake Hylia where players can participate in fishing mini-games."
+    }
+  ]
+}

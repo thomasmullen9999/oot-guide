@@ -1,0 +1,184 @@
+{
+  "heartpieces": [
+    {
+      "id": 1,
+      "location": "Kakariko Village - Cucco Game",
+      "description": "Bring all seven cuccos to the pen in Kakariko Village as a child. After completing the task, speak to the Cucco Lady to receive a heart piece."
+    },
+    {
+      "id": 2,
+      "location": "Kakariko Village - Windmill",
+      "description": "Use the Boomerang to grab the heart piece spinning on the rotating platform inside the windmill."
+    },
+    {
+      "id": 3,
+      "location": "Kakariko Village - Graveyard",
+      "description": "Play Dampé's Grave-digging Tour as a child. Keep paying him until he digs up a heart piece from one of the soft soil spots."
+    },
+    {
+      "id": 4,
+      "location": "Kakariko Village - Graveyard Race",
+      "description": "After completing the Forest Temple as an adult, race Dampé in the graveyard and beat his time to receive a heart piece."
+    },
+    {
+      "id": 5,
+      "location": "Kakariko Village - Roof",
+      "description": "As an adult, use the Hookshot to reach the top of the lookout tower in Kakariko Village. From there, leap across to the roof of the house below, where a man will give you a heart piece."
+    },
+    {
+      "id": 6,
+      "location": "Death Mountain Trail - Bombable Wall",
+      "description": "As a child, find the bombable wall on the trail leading up Death Mountain. Inside the cave is a heart piece waiting for you."
+    },
+    {
+      "id": 7,
+      "location": "Death Mountain Crater - Ladder",
+      "description": "In Death Mountain Crater, climb the ladder leading to a small ledge near the entrance to the Fire Temple. A heart piece is located here."
+    },
+    {
+      "id": 8,
+      "location": "Death Mountain Crater - Bolero of Fire",
+      "description": "After learning the Bolero of Fire, warp to Death Mountain Crater as an adult. Use the Hookshot to reach the heart piece on the nearby ledge."
+    },
+    {
+      "id": 9,
+      "location": "Goron City - Rolling Goron",
+      "description": "Stop the rolling Goron inside Goron City by using a Bomb, and he will reward you with a heart piece."
+    },
+    {
+      "id": 10,
+      "location": "Zora's River - Magic Bean Platform",
+      "description": "Plant a Magic Bean in the soft soil by Zora's River as a child. Return as an adult and ride the platform to a heart piece."
+    },
+    {
+      "id": 11,
+      "location": "Zora's River - Frogs' Game",
+      "description": "Play all of the different Ocarina songs (except the Sun's Song) for the frogs on the log by Zora's River. Each song will reward you with rupees, and eventually a heart piece."
+    },
+    {
+      "id": 12,
+      "location": "Zora's River - Frog Mini-Game",
+      "description": "After playing the Ocarina songs for the frogs, participate in a bug-catching mini-game where you hit the correct frogs as butterflies pass by. Successfully complete it to earn a heart piece."
+    },
+    {
+      "id": 13,
+      "location": "Zora's Domain - Frozen Waterfall",
+      "description": "As an adult, after defeating Morpha and unfreezing Zora's Domain, climb the frozen waterfall and jump across the platforms to obtain a heart piece."
+    },
+    {
+      "id": 14,
+      "location": "Lake Hylia - Fishing",
+      "description": "In the Fishing Pond, catch a fish that weighs at least 10 pounds as a child or 15 pounds as an adult to earn a heart piece from the pond owner."
+    },
+    {
+      "id": 15,
+      "location": "Lake Hylia - Underwater",
+      "description": "Use the Iron Boots and Zora Tunic to sink to the bottom of Lake Hylia as an adult, where you'll find a heart piece inside a small crate."
+    },
+    {
+      "id": 16,
+      "location": "Lake Hylia - Scarecrow's Song",
+      "description": "After playing the Scarecrow's Song as an adult, use the Hookshot on the scarecrow to reach a heart piece on the platform above Lake Hylia."
+    },
+    {
+      "id": 17,
+      "location": "Gerudo Valley - Waterfall",
+      "description": "Jump off the broken bridge in Gerudo Valley and float down the river. Behind the waterfall is a ledge with a heart piece."
+    },
+    {
+      "id": 18,
+      "location": "Gerudo Valley - Crate",
+      "description": "After acquiring the Longshot as an adult, return to Gerudo Valley and use it to reach the heart piece inside a crate on the far side of the valley."
+    },
+    {
+      "id": 19,
+      "location": "Gerudo Fortress - Archery",
+      "description": "Score at least 1,000 points in the horseback archery mini-game at the Gerudo Fortress as an adult to receive a heart piece."
+    },
+    {
+      "id": 20,
+      "location": "Haunted Wasteland - Structure",
+      "description": "In the Haunted Wasteland, climb the structure at the center of the area. Use the Longshot to reach a heart piece on top."
+    },
+    {
+      "id": 21,
+      "location": "Desert Colossus - Magic Bean Platform",
+      "description": "Plant a Magic Bean in the soft soil near the entrance to the Spirit Temple. Return as an adult and ride the platform to a heart piece."
+    },
+    {
+      "id": 22,
+      "location": "Desert Colossus - Requiem of Spirit",
+      "description": "After learning the Requiem of Spirit, return to the Desert Colossus as a child and use a Bomb to blow up a cracked wall. Inside is a heart piece."
+    },
+    {
+      "id": 23,
+      "location": "Lost Woods - Skull Kid",
+      "description": "Play Saria's Song for the Skull Kid in the Lost Woods to receive a heart piece."
+    },
+    {
+      "id": 24,
+      "location": "Lost Woods - Target Practice",
+      "description": "In the Lost Woods, complete the slingshot target practice mini-game by hitting the bullseye three times in a row to earn a heart piece."
+    },
+    {
+      "id": 25,
+      "location": "Lost Woods - Soft Soil Patch",
+      "description": "Plant a Magic Bean in the soft soil patch in the Lost Woods near the entrance to the Sacred Forest Meadow. Return as an adult and ride the platform to a heart piece."
+    },
+    {
+      "id": 26,
+      "location": "Hyrule Field - Poes",
+      "description": "As an adult, hunt down and capture all 10 Big Poes in Hyrule Field. Return them to the Poe Collector in the ruins near the Castle Town market to receive a heart piece."
+    },
+    {
+      "id": 27,
+      "location": "Lon Lon Ranch - Talon’s Chickens",
+      "description": "Win the Super Cucco game in Lon Lon Ranch by finding Talon’s three special chickens to receive a heart piece."
+    },
+    {
+      "id": 28,
+      "location": "Lon Lon Ranch - Tower",
+      "description": "In the back of the ranch, climb the tower and jump off the top to land on the silo roof, where you will find a heart piece."
+    },
+    {
+      "id": 29,
+      "location": "Market - Treasure Box Shop",
+      "description": "Win the random Treasure Box game in Castle Town Market at night using the Lens of Truth to correctly open all the boxes and receive a heart piece."
+    },
+    {
+      "id": 30,
+      "location": "Market - Bombchu Bowling",
+      "description": "Win a round of Bombchu Bowling to receive a heart piece as one of the potential prizes."
+    },
+    {
+      "id": 31,
+      "location": "Market - Shooting Gallery",
+      "description": "Score a perfect 10 out of 10 in the Shooting Gallery in Castle Town as a child to win a heart piece."
+    },
+    {
+      "id": 32,
+      "location": "Zora's Domain - Torch Run",
+      "description": "Light all the torches in Zora’s Domain as a child using Din’s Fire to make a chest appear containing a heart piece."
+    },
+    {
+      "id": 33,
+      "location": "Ice Cavern",
+      "description": "In the Ice Cavern, find the heart piece located on a ledge in one of the rooms filled with spinning ice blades."
+    },
+    {
+      "id": 34,
+      "location": "Dodongo’s Cavern",
+      "description": "Return to Dodongo’s Cavern as an adult with the Scarecrow's Song and Longshot. Use them to reach a heart piece on a high ledge in the main room."
+    },
+    {
+      "id": 35,
+      "location": "Inside Jabu-Jabu’s Belly",
+      "description": "After obtaining the Boomerang in Jabu-Jabu’s Belly, use it to grab the heart piece from a ledge in the room with the moving platforms."
+    },
+    {
+      "id": 36,
+      "location": "Ganon’s Castle - Exterior",
+      "description": "Before entering Ganon’s Castle, use the Hover Boots and Longshot to reach a hidden platform outside with a heart piece."
+    }
+  ]
+}

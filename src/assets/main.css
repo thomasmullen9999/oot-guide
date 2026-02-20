@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --midnight: #0a0d0f;
+  --deep: #111518;
+  --surface: #161c20;
+  --card: #1c2428;
+  --card-hover: #212c32;
+  --border: #2a3840;
+  --border-bright: #3d5260;
+  --gold: #c9a84c;
+  --gold-bright: #e8c96a;
+  --gold-dim: #7a6230;
+  --parchment: #e8dfc0;
+  --parchment-dim: #b8ad90;
+  --text: #cdd8de;
+  --text-dim: #7a9aaa;
+  --red: #b34040;
+  --red-bright: #d95f5f;
+  --green: #3d7a5a;
+  --green-bright: #52a878;
+  --triforce-glow: rgba(201, 168, 76, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--midnight);
+  color: var(--text);
+  font-family: "Crimson Text", Georgia, serif;
+  font-size: 18px;
+  line-height: 1.7;
+  min-height: 100vh;
+  background-image:
+    radial-gradient(
+      ellipse at 20% 20%,
+      rgba(201, 168, 76, 0.04) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse at 80% 80%,
+      rgba(61, 122, 90, 0.04) 0%,
+      transparent 50%
+    );
+}
+
+/* ── Typography ─────────────────────────────────────── */
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Cinzel", serif;
+  letter-spacing: 0.03em;
+  line-height: 1.2;
+}
+
+/* ── Scrollbar ──────────────────────────────────────── */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--deep);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--gold-dim);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold);
+}
+
+/* ── Card base ──────────────────────────────────────── */
+
+.oot-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  position: relative;
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.oot-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 4px;
+  background: linear-gradient(
+    135deg,
+    rgba(201, 168, 76, 0.05) 0%,
+    transparent 60%
+  );
+  pointer-events: none;
+}
+
+.oot-card:hover {
+  border-color: var(--gold-dim);
+  transform: translateY(-2px);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(201, 168, 76, 0.1);
+}
+
+/* ── Gold divider ───────────────────────────────────── */
+
+.gold-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold-dim), transparent);
+  border: none;
+  margin: 1rem 0;
+}
+
+/* ── Buttons ────────────────────────────────────────── */
+
+.btn-gold {
+  background: linear-gradient(135deg, var(--gold-dim), var(--gold));
+  color: var(--midnight);
+  font-family: "Cinzel", serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  padding: 0.5rem 1.25rem;
+  border-radius: 2px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-gold:hover {
+  background: linear-gradient(135deg, var(--gold), var(--gold-bright));
+  box-shadow: 0 0 20px rgba(201, 168, 76, 0.3);
+  transform: translateY(-1px);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text-dim);
+  font-family: "Cinzel", serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  padding: 0.4rem 1rem;
+  border-radius: 2px;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-ghost:hover {
+  border-color: var(--gold-dim);
+  color: var(--gold);
+}
+
+.btn-ghost.active {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: rgba(201, 168, 76, 0.08);
+}
+
+/* ── Inputs ─────────────────────────────────────────── */
+
+.oot-input {
+  background: var(--deep);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  color: var(--text);
+  font-family: "Crimson Text", serif;
+  font-size: 1rem;
+  padding: 0.6rem 1rem;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+  width: 100%;
+}
+
+.oot-input::placeholder {
+  color: var(--text-dim);
+  font-style: italic;
+}
+
+.oot-input:focus {
+  outline: none;
+  border-color: var(--gold-dim);
+  box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.1);
+}
+
+/* ── Progress bar ───────────────────────────────────── */
+
+.oot-progress-track {
+  background: var(--deep);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  height: 8px;
+  overflow: hidden;
+}
+
+.oot-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--gold-dim), var(--gold));
+  border-radius: 2px;
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 8px rgba(201, 168, 76, 0.4);
+}
+
+/* ── Section heading ────────────────────────────────── */
+
+.section-heading {
+  font-family: "Cinzel", serif;
+  color: var(--gold);
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.section-heading::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  margin: 0.75rem auto 0;
+}
+
+/* ── Badge ──────────────────────────────────────────── */
+
+.oot-badge {
+  font-family: "Cinzel", serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.6rem;
+  border-radius: 2px;
+  border: 1px solid var(--border-bright);
+  color: var(--text-dim);
+  background: var(--deep);
+}
+
+/* ── Page fade transition ───────────────────────────── */
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* ── Triforce decoration ────────────────────────────── */
+
+.triforce-accent {
+  color: var(--gold);
+  opacity: 0.6;
+  font-size: 0.7rem;
+}

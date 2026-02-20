@@ -1,0 +1,604 @@
+{
+  "goldskulltulas": [
+    {
+      "id": 1,
+      "number": 1,
+      "location": "Great Deku Tree",
+      "description": "In the room where you obtain the slingshot. Press the yellow switch to raise the platform and jump to the alcove on the left, avoiding the regular skulltula in your way"
+    },
+    {
+      "id": 2,
+      "number": 2,
+      "location": "Great Deku Tree",
+      "description": "After jumping down through the large web in the main room, use your slingshot to kill the skulltula then climb the web to collect the token"
+    },
+    {
+      "id": 3,
+      "number": 3,
+      "location": "Great Deku Tree",
+      "description": "In the same room as token #2, lurking over the water. Use your slingshot again to kill it then take a running leap towards the token"
+    },
+    {
+      "id": 4,
+      "number": 4,
+      "location": "Great Deku Tree",
+      "description": "After burning the spider web blocking the door in the basement, look on the wall near the water to find the skulltula."
+    },
+    {
+      "id": 5,
+      "number": 5,
+      "location": "Hyrule Field",
+      "description": "Near the entrance to Kakariko Village, look for a tree in the fenced-in area. Roll into it and a skulltula will fall out."
+    },
+    {
+      "id": 6,
+      "number": 6,
+      "location": "Hyrule Field",
+      "description": "At night, near the entrance to the Lon Lon Ranch, a skulltula will appear on one of the walls surrounding the ranch."
+    },
+    {
+      "id": 7,
+      "number": 7,
+      "location": "Hyrule Castle",
+      "description": "In the tree at the entrance of Hyrule Castle. Roll into the tree to make the skulltula fall."
+    },
+    {
+      "id": 8,
+      "number": 8,
+      "location": "Hyrule Castle",
+      "description": "In the area where Talon is sleeping. Look up at the brick wall near the guard shack at night."
+    },
+    {
+      "id": 9,
+      "number": 9,
+      "location": "Kakariko Village",
+      "description": "On the side of the House of Skulltula, near the construction site. It only appears at night."
+    },
+    {
+      "id": 10,
+      "number": 10,
+      "location": "Kakariko Village",
+      "description": "Climb up the ladder to the watchtower near the windmill at night. You'll find a skulltula on the side of the tower."
+    },
+    {
+      "id": 11,
+      "number": 11,
+      "location": "Kakariko Village",
+      "description": "In a pile of soft soil at the base of the tree near the graveyard entrance. Use a bottle of bugs to lure the skulltula out."
+    },
+    {
+      "id": 12,
+      "number": 12,
+      "location": "Kakariko Village",
+      "description": "At the rear of the graveyard. Roll into the tree to make the skulltula fall from its branches."
+    },
+    {
+      "id": 13,
+      "number": 13,
+      "location": "Graveyard",
+      "description": "On the wall near the back of the graveyard. It only appears at night, and you'll need to use your boomerang to grab the token."
+    },
+    {
+      "id": 14,
+      "number": 14,
+      "location": "Death Mountain Trail",
+      "description": "Look for a skulltula on the wall near the entrance to Goron City. It only appears at night."
+    },
+    {
+      "id": 15,
+      "number": 15,
+      "location": "Death Mountain Trail",
+      "description": "Near the entrance to Dodongo's Cavern, there is a patch of soft soil. Use a bottle of bugs to summon the skulltula."
+    },
+    {
+      "id": 16,
+      "number": 16,
+      "location": "Death Mountain Crater",
+      "description": "Inside the crater, near the entrance, there is a climbable wall with a skulltula on it."
+    },
+    {
+      "id": 17,
+      "number": 17,
+      "location": "Zora's River",
+      "description": "On the ladder that leads up to the waterfall near the entrance to Zora's Domain. The skulltula appears at night."
+    },
+    {
+      "id": 18,
+      "number": 18,
+      "location": "Zora's River",
+      "description": "Near the bridge in Zora's River, roll into the nearby tree to make a skulltula fall."
+    },
+    {
+      "id": 19,
+      "number": 19,
+      "location": "Zora's Domain",
+      "description": "At the entrance to Zora's Fountain, climb the wall near the waterfall to find a skulltula at night."
+    },
+    {
+      "id": 20,
+      "number": 20,
+      "location": "Zora's Fountain",
+      "description": "On the back wall near Jabu-Jabu, you will find a skulltula at night. Use your slingshot to kill it and grab the token."
+    },
+    {
+      "id": 21,
+      "number": 21,
+      "location": "Lake Hylia",
+      "description": "On the back wall of the Lakeside Laboratory, there is a skulltula that appears at night. Use your boomerang to retrieve the token."
+    },
+    {
+      "id": 22,
+      "number": 22,
+      "location": "Lake Hylia",
+      "description": "In a patch of soft soil near the Lakeside Laboratory, use a bottle of bugs to reveal a skulltula."
+    },
+    {
+      "id": 23,
+      "number": 23,
+      "location": "Lake Hylia",
+      "description": "On one of the small islands near the Fishing Pond, look for a skulltula on the back of the tree at night."
+    },
+    {
+      "id": 24,
+      "number": 24,
+      "location": "Gerudo Valley",
+      "description": "At night, look on the wall near the waterfall to find a skulltula. You will need the boomerang to retrieve the token."
+    },
+    {
+      "id": 25,
+      "number": 25,
+      "location": "Gerudo Valley",
+      "description": "In a crate near the entrance to the valley, roll into the crate to break it and reveal a skulltula."
+    },
+    {
+      "id": 26,
+      "number": 26,
+      "location": "Gerudo Valley",
+      "description": "On the far side of the valley, near the broken bridge, a skulltula appears on the wall at night."
+    },
+    {
+      "id": 27,
+      "number": 27,
+      "location": "Gerudo Fortress",
+      "description": "At night, look on the wall of the fortress near the horse pen to find a skulltula."
+    },
+    {
+      "id": 28,
+      "number": 28,
+      "location": "Gerudo Fortress",
+      "description": "Behind the fortress, look on the wooden structure near the archery range to find a skulltula at night."
+    },
+    {
+      "id": 29,
+      "number": 29,
+      "location": "Haunted Wasteland",
+      "description": "In the Haunted Wasteland, look for a skulltula on one of the stone structures near the flags at night."
+    },
+    {
+      "id": 30,
+      "number": 30,
+      "location": "Desert Colossus",
+      "description": "On the outer wall of the Spirit Temple, there is a skulltula that appears at night."
+    },
+    {
+      "id": 31,
+      "number": 31,
+      "location": "Desert Colossus",
+      "description": "Near the temple entrance, use a bottle of bugs on the soft soil to reveal a skulltula."
+    },
+    {
+      "id": 32,
+      "number": 32,
+      "location": "Lost Woods",
+      "description": "In the first area of the Lost Woods, roll into the tree on the right to make a skulltula fall."
+    },
+    {
+      "id": 33,
+      "number": 33,
+      "location": "Lost Woods",
+      "description": "In the area near the bridge to the Sacred Forest Meadow, a skulltula appears on the wall at night."
+    },
+    {
+      "id": 34,
+      "number": 34,
+      "location": "Lost Woods",
+      "description": "In the area where you play the memory game with the Skull Kid, there is a soft soil patch. Use bugs to reveal a skulltula."
+    },
+    {
+      "id": 35,
+      "number": 35,
+      "location": "Sacred Forest Meadow",
+      "description": "Look for a skulltula on the wall near the entrance to the Forest Temple at night."
+    },
+    {
+      "id": 36,
+      "number": 36,
+      "location": "Forest Temple",
+      "description": "In the main courtyard with the well, climb the vines to find a skulltula hidden among the leaves."
+    },
+    {
+      "id": 37,
+      "number": 37,
+      "location": "Forest Temple",
+      "description": "In the twisted corridor, there is a skulltula on the ceiling. Use your hookshot to grab the token."
+    },
+    {
+      "id": 38,
+      "number": 38,
+      "location": "Forest Temple",
+      "description": "In one of the rooms with the rotating walls, look on the ceiling for a skulltula."
+    },
+    {
+      "id": 39,
+      "number": 39,
+      "location": "Forest Temple",
+      "description": "In the room with the four Poe Sisters, a skulltula can be found on the wall near the entrance."
+    },
+    {
+      "id": 40,
+      "number": 40,
+      "location": "Death Mountain Crater",
+      "description": "Inside the crater, near the Fire Temple entrance, look for a skulltula on the climbable wall."
+    },
+    {
+      "id": 41,
+      "number": 41,
+      "location": "Fire Temple",
+      "description": "In the first large room of the temple, look on the wall to the left to find a skulltula."
+    },
+    {
+      "id": 42,
+      "number": 42,
+      "location": "Fire Temple",
+      "description": "In the maze room with the rolling boulders, look for a skulltula on the wall."
+    },
+    {
+      "id": 43,
+      "number": 43,
+      "location": "Fire Temple",
+      "description": "In the room with the pillar of fire, look behind one of the pillars to find a skulltula."
+    },
+    {
+      "id": 44,
+      "number": 44,
+      "location": "Fire Temple",
+      "description": "In the room with the large bridge, a skulltula is hiding on one of the walls. Use the hookshot to reach it."
+    },
+    {
+      "id": 45,
+      "number": 45,
+      "location": "Ice Cavern",
+      "description": "In the room with the spinning blade, look behind the ice blocks to find a skulltula."
+    },
+    {
+      "id": 46,
+      "number": 46,
+      "location": "Ice Cavern",
+      "description": "In the room with the red ice, use blue fire to melt the ice and reveal a skulltula."
+    },
+    {
+      "id": 47,
+      "number": 47,
+      "location": "Water Temple",
+      "description": "In the central tower, raise the water level and then swim to find a skulltula on the wall."
+    },
+    {
+      "id": 48,
+      "number": 48,
+      "location": "Water Temple",
+      "description": "In the room with the rolling boulders, there is a skulltula hidden behind one of the boulders."
+    },
+    {
+      "id": 49,
+      "number": 49,
+      "location": "Water Temple",
+      "description": "In the waterfall room, look behind the waterfall to find a skulltula."
+    },
+    {
+      "id": 50,
+      "number": 50,
+      "location": "Water Temple",
+      "description": "In the room where you fight Dark Link, look on the walls to find a skulltula."
+    },
+    {
+      "id": 51,
+      "number": 51,
+      "location": "Bottom of the Well",
+      "description": "In one of the large rooms near the entrance, a skulltula can be found on the ceiling."
+    },
+    {
+      "id": 52,
+      "number": 52,
+      "location": "Bottom of the Well",
+      "description": "In the room with the invisible floor, look on the walls to find a skulltula."
+    },
+    {
+      "id": 53,
+      "number": 53,
+      "location": "Bottom of the Well",
+      "description": "In the coffin room, a skulltula is hiding behind one of the coffins."
+    },
+    {
+      "id": 54,
+      "number": 54,
+      "location": "Shadow Temple",
+      "description": "In the first room with the spinning blade, look behind one of the walls to find a skulltula."
+    },
+    {
+      "id": 55,
+      "number": 55,
+      "location": "Shadow Temple",
+      "description": "In the room with the invisible platforms, look on the walls to find a skulltula."
+    },
+    {
+      "id": 56,
+      "number": 56,
+      "location": "Shadow Temple",
+      "description": "In the boat room, there is a skulltula on the wall near the dock."
+    },
+    {
+      "id": 57,
+      "number": 57,
+      "location": "Shadow Temple",
+      "description": "In the room with the giant fans, look behind the fans to find a skulltula."
+    },
+    {
+      "id": 58,
+      "number": 58,
+      "location": "Spirit Temple",
+      "description": "In the room with the giant statue, look on the statue's hands to find a skulltula."
+    },
+    {
+      "id": 59,
+      "number": 59,
+      "location": "Spirit Temple",
+      "description": "In the room with the rotating mirror, a skulltula is hidden behind one of the mirrors."
+    },
+    {
+      "id": 60,
+      "number": 60,
+      "location": "Spirit Temple",
+      "description": "In the room with the silver rupees, look on the walls to find a skulltula."
+    },
+    {
+      "id": 61,
+      "number": 61,
+      "location": "Spirit Temple",
+      "description": "In the room with the boulders, look behind one of the boulders to find a skulltula."
+    },
+    {
+      "id": 62,
+      "number": 62,
+      "location": "Hyrule Field",
+      "description": "In a tree near the entrance to Lake Hylia, roll into the tree to make a skulltula fall."
+    },
+    {
+      "id": 63,
+      "number": 63,
+      "location": "Kakariko Village",
+      "description": "On the wall of the House of Skulltula, a skulltula appears at night."
+    },
+    {
+      "id": 64,
+      "number": 64,
+      "location": "Kakariko Village",
+      "description": "On the side of Impa's house, a skulltula appears at night."
+    },
+    {
+      "id": 65,
+      "number": 65,
+      "location": "Graveyard",
+      "description": "Behind the gravestones, a skulltula can be found at night."
+    },
+    {
+      "id": 66,
+      "number": 66,
+      "location": "Death Mountain Trail",
+      "description": "On the wall near the entrance to Goron City, a skulltula appears at night."
+    },
+    {
+      "id": 67,
+      "number": 67,
+      "location": "Goron City",
+      "description": "In the room with the rolling Goron, a skulltula can be found on the wall."
+    },
+    {
+      "id": 68,
+      "number": 68,
+      "location": "Zora's River",
+      "description": "Near the waterfall leading to Zora's Domain, a skulltula can be found at night."
+    },
+    {
+      "id": 69,
+      "number": 69,
+      "location": "Zora's Domain",
+      "description": "On the wall near the entrance to Zora's Fountain, a skulltula can be found at night."
+    },
+    {
+      "id": 70,
+      "number": 70,
+      "location": "Zora's Fountain",
+      "description": "On the wall near Jabu-Jabu, a skulltula can be found at night."
+    },
+    {
+      "id": 71,
+      "number": 71,
+      "location": "Lon Lon Ranch",
+      "description": "On the wall of the horse pen, a skulltula appears at night."
+    },
+    {
+      "id": 72,
+      "number": 72,
+      "location": "Lon Lon Ranch",
+      "description": "Inside the silo, a skulltula can be found on the wall."
+    },
+    {
+      "id": 73,
+      "number": 73,
+      "location": "Lon Lon Ranch",
+      "description": "In the back area of the ranch, look on the walls to find a skulltula at night."
+    },
+    {
+      "id": 74,
+      "number": 74,
+      "location": "Sacred Forest Meadow",
+      "description": "On the wall near the entrance to the Forest Temple, a skulltula appears at night."
+    },
+    {
+      "id": 75,
+      "number": 75,
+      "location": "Lake Hylia",
+      "description": "On the wall of the Lakeside Laboratory, a skulltula appears at night."
+    },
+    {
+      "id": 76,
+      "number": 76,
+      "location": "Gerudo Valley",
+      "description": "On the wall near the waterfall, a skulltula can be found at night."
+    },
+    {
+      "id": 77,
+      "number": 77,
+      "location": "Gerudo Fortress",
+      "description": "On the wall of the fortress near the horse pen, a skulltula appears at night."
+    },
+    {
+      "id": 78,
+      "number": 78,
+      "location": "Desert Colossus",
+      "description": "On the outer wall of the Spirit Temple, a skulltula appears at night."
+    },
+    {
+      "id": 79,
+      "number": 79,
+      "location": "Haunted Wasteland",
+      "description": "On the wall near the flags, a skulltula can be found at night."
+    },
+    {
+      "id": 80,
+      "number": 80,
+      "location": "Zora's Fountain",
+      "description": "On the wall near Jabu-Jabu, a skulltula can be found at night."
+    },
+    {
+      "id": 81,
+      "number": 81,
+      "location": "Spirit Temple",
+      "description": "In the room with the giant statue, a skulltula can be found on the statue's hands."
+    },
+    {
+      "id": 82,
+      "number": 82,
+      "location": "Shadow Temple",
+      "description": "In the room with the invisible platforms, a skulltula can be found on the walls."
+    },
+    {
+      "id": 83,
+      "number": 83,
+      "location": "Water Temple",
+      "description": "In the room where you fight Dark Link, a skulltula can be found on the walls."
+    },
+    {
+      "id": 84,
+      "number": 84,
+      "location": "Ice Cavern",
+      "description": "In the room with the red ice, a skulltula can be found after melting the ice."
+    },
+    {
+      "id": 85,
+      "number": 85,
+      "location": "Fire Temple",
+      "description": "In the room with the large bridge, a skulltula can be found on the walls."
+    },
+    {
+      "id": 86,
+      "number": 86,
+      "location": "Forest Temple",
+      "description": "In the room with the four Poe Sisters, a skulltula can be found on the walls."
+    },
+    {
+      "id": 87,
+      "number": 87,
+      "location": "Gerudo Fortress",
+      "description": "On the wall near the archery range, a skulltula can be found at night."
+    },
+    {
+      "id": 88,
+      "number": 88,
+      "location": "Gerudo Valley",
+      "description": "On the wall near the broken bridge, a skulltula can be found at night."
+    },
+    {
+      "id": 89,
+      "number": 89,
+      "location": "Gerudo Valley",
+      "description": "On the wall near the waterfall, a skulltula can be found at night."
+    },
+    {
+      "id": 90,
+      "number": 90,
+      "location": "Lon Lon Ranch",
+      "description": "In the back area of the ranch, a skulltula can be found on the walls at night."
+    },
+    {
+      "id": 91,
+      "number": 91,
+      "location": "Lake Hylia",
+      "description": "On the wall near the Fishing Pond, a skulltula can be found at night."
+    },
+    {
+      "id": 92,
+      "number": 92,
+      "location": "Hyrule Castle",
+      "description": "On the wall near the castle moat, a skulltula can be found at night."
+    },
+    {
+      "id": 93,
+      "number": 93,
+      "location": "Kakariko Village",
+      "description": "On the wall near the construction site, a skulltula can be found at night."
+    },
+    {
+      "id": 94,
+      "number": 94,
+      "location": "Graveyard",
+      "description": "On the wall near the entrance to the graveyard, a skulltula can be found at night."
+    },
+    {
+      "id": 95,
+      "number": 95,
+      "location": "Zora's River",
+      "description": "On the wall near the entrance to Zora's Domain, a skulltula can be found at night."
+    },
+    {
+      "id": 96,
+      "number": 96,
+      "location": "Lost Woods",
+      "description": "On the wall near the entrance to the Sacred Forest Meadow, a skulltula can be found at night."
+    },
+    {
+      "id": 97,
+      "number": 97,
+      "location": "Gerudo Valley",
+      "description": "On the wall near the waterfall, a skulltula can be found at night."
+    },
+    {
+      "id": 98,
+      "number": 98,
+      "location": "Gerudo Fortress",
+      "description": "On the wall near the archery range, a skulltula can be found at night."
+    },
+    {
+      "id": 99,
+      "number": 99,
+      "location": "Spirit Temple",
+      "description": "In the room with the giant statue, a skulltula can be found on the statue's hands."
+    },
+    {
+      "id": 100,
+      "number": 100,
+      "location": "Shadow Temple",
+      "description": "In the room with the invisible platforms, a skulltula can be found on the walls."
+    }
+  ]
+}

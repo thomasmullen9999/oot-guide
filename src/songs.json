@@ -1,0 +1,88 @@
+{
+  "songs": [
+    {
+      "id": 1,
+      "name": "Zelda's Lullaby",
+      "notes": "C - Z - C - C - Z - C",
+      "function": "Used to open the Door of Time and to activate certain devices and unlock shrines.",
+      "location": "Learned from Princess Zelda in Hyrule Castle."
+    },
+    {
+      "id": 2,
+      "name": "Saria's Song",
+      "notes": "S - S - S - C - S - S - C",
+      "function": "Used to communicate with Saria and to calm certain creatures.",
+      "location": "Learned from Saria in the Sacred Forest Meadow."
+    },
+    {
+      "id": 3,
+      "name": "Song of Time",
+      "notes": "C - C - Z - C - C - Z",
+      "function": "Used to open the Door of Time and to move large blocks.",
+      "location": "Learned in the Temple of Time."
+    },
+    {
+      "id": 4,
+      "name": "Song of Storms",
+      "notes": "C - S - C - S - C - S",
+      "function": "Used to create rain and to fill empty ponds.",
+      "location": "Learned from the Windmill Man in Kakariko Village."
+    },
+    {
+      "id": 5,
+      "name": "Epona's Song",
+      "notes": "S - C - C - S - C - C",
+      "function": "Summons Epona the horse.",
+      "location": "Learned from a cow in Lon Lon Ranch."
+    },
+    {
+      "id": 6,
+      "name": "Bolero of Fire",
+      "notes": "C - S - Z - S - C - Z",
+      "function": "Warps you to Death Mountain Crater.",
+      "location": "Learned from the Great Fairy in Death Mountain Crater."
+    },
+    {
+      "id": 7,
+      "name": "Minuet of Forest",
+      "notes": "S - Z - S - C - C - S",
+      "function": "Warps you to the Sacred Forest Meadow.",
+      "location": "Learned from the Great Fairy in the Forest Temple."
+    },
+    {
+      "id": 8,
+      "name": "Requiem of Spirit",
+      "notes": "C - S - C - Z - S - Z",
+      "function": "Warps you to the Desert Colossus.",
+      "location": "Learned from the Great Fairy in the Spirit Temple."
+    },
+    {
+      "id": 9,
+      "name": "Nocturne of Shadow",
+      "notes": "C - S - C - C - Z - S",
+      "function": "Warps you to the Shadow Temple.",
+      "location": "Learned from the Great Fairy in Kakariko Village."
+    },
+    {
+      "id": 10,
+      "name": "Prelude of Light",
+      "notes": "C - C - Z - C - Z - S",
+      "function": "Warps you to the Temple of Time.",
+      "location": "Learned from the Great Fairy in the Temple of Time."
+    },
+    {
+      "id": 11,
+      "name": "Song of Time",
+      "notes": "C - C - Z - C - C - Z",
+      "function": "Used to open the Door of Time and to manipulate time-based objects.",
+      "location": "Learned in the Temple of Time."
+    },
+    {
+      "id": 12,
+      "name": "Sun's Song",
+      "notes": "C - Z - S - C - Z - S",
+      "function": "Changes day to night or night to day.",
+      "location": "Learned in the Graveyard by playing the song for a tombstone."
+    }
+  ]
+}
