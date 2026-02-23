@@ -72,6 +72,7 @@ const isComplete = computed<boolean>(() =>
         ⟨ {{ HeartPiece.location }} ⟩
       </RouterLink>
       <span v-else class="heart-loc-text">⟨ {{ HeartPiece.location }} ⟩</span>
+      <img src="@/assets/img/heartpiece.png" alt="Token" class="heart-piece" />
 
       <div class="heart-actions">
         <button

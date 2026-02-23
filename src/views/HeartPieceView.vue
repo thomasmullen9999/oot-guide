@@ -24,7 +24,7 @@ onMounted(() => {
       <div class="bg-white rounded-xl shadow-md p-6">
         <div class="flex items-center justify-between mb-4">
           <h1 class="text-2xl font-bold">Heart Piece #{{ heartPiece.id }}</h1>
-          <span class="text-2xl">❤️</span>
+          <span class="text-2xl"></span>
         </div>
         <p class="text-red-500 font-semibold mb-3">{{ heartPiece.location }}</p>
         <p class="text-gray-600 leading-relaxed">
