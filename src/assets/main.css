@@ -7,22 +7,22 @@
   --midnight: #0a0d0f;
   --deep: #111518;
   --surface: #161c20;
-  --card: #1c2428;
-  --card-hover: #212c32;
-  --border: #2a3840;
-  --border-bright: #3d5260;
-  --gold: #c9a84c;
-  --gold-bright: #e8c96a;
-  --gold-dim: #7a6230;
-  --parchment: #e8dfc0;
-  --parchment-dim: #b8ad90;
-  --text: #cdd8de;
-  --text-dim: #7a9aaa;
-  --red: #b34040;
-  --red-bright: #d95f5f;
-  --green: #3d7a5a;
-  --green-bright: #52a878;
-  --triforce-glow: rgba(201, 168, 76, 0.15);
+  --card: #1e2a30; /* slightly lighter for better contrast vs midnight */
+  --card-hover: #253540;
+  --border: #334a56; /* brighter border — was too dark to see */
+  --border-bright: #4e6e80;
+  --gold: #d4a84c; /* slightly brighter primary gold */
+  --gold-bright: #f0d070; /* more vivid highlight gold */
+  --gold-dim: #9a7a38; /* lifted dim gold so it's legible on dark bg */
+  --parchment: #f0e8cc; /* brighter parchment — was too grey */
+  --parchment-dim: #c8bc98;
+  --text: #dde8ee; /* brighter base text — was too dim */
+  --text-dim: #8eb4c8; /* clearer secondary text */
+  --red: #c44848;
+  --red-bright: #e86464;
+  --green: #4a8f6a;
+  --green-bright: #60c090;
+  --triforce-glow: rgba(212, 168, 76, 0.18);
 }
 
 * {
@@ -37,18 +37,18 @@ body {
   background-color: var(--midnight);
   color: var(--text);
   font-family: "Crimson Text", Georgia, serif;
-  font-size: 18px;
-  line-height: 1.7;
+  font-size: 20px; /* up from 18px — improves general readability */
+  line-height: 1.8; /* slightly more breathing room */
   min-height: 100vh;
   background-image:
     radial-gradient(
       ellipse at 20% 20%,
-      rgba(201, 168, 76, 0.04) 0%,
+      rgba(212, 168, 76, 0.05) 0%,
       transparent 50%
     ),
     radial-gradient(
       ellipse at 80% 80%,
-      rgba(61, 122, 90, 0.04) 0%,
+      rgba(61, 122, 90, 0.05) 0%,
       transparent 50%
     );
 }
@@ -60,14 +60,33 @@ h2,
 h3,
 h4 {
   font-family: "Cinzel", serif;
-  letter-spacing: 0.03em;
-  line-height: 1.2;
+  letter-spacing: 0.04em;
+  line-height: 1.25;
+  color: var(--parchment); /* headings now use bright parchment, not dim text */
+}
+
+h1 {
+  font-size: 2.4rem;
+}
+h2 {
+  font-size: 1.9rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+h4 {
+  font-size: 1.25rem;
+}
+
+p {
+  font-size: 1rem; /* ensures body copy stays at 20px baseline */
+  color: var(--text);
 }
 
 /* ── Scrollbar ──────────────────────────────────────── */
 
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 7px;
 }
 ::-webkit-scrollbar-track {
   background: var(--deep);
@@ -100,7 +119,7 @@ h4 {
   border-radius: 4px;
   background: linear-gradient(
     135deg,
-    rgba(201, 168, 76, 0.05) 0%,
+    rgba(212, 168, 76, 0.06) 0%,
     transparent 60%
   );
   pointer-events: none;
@@ -111,7 +130,7 @@ h4 {
   transform: translateY(-2px);
   box-shadow:
     0 8px 32px rgba(0, 0, 0, 0.5),
-    0 0 0 1px rgba(201, 168, 76, 0.1);
+    0 0 0 1px rgba(212, 168, 76, 0.15);
 }
 
 /* ── Gold divider ───────────────────────────────────── */
@@ -120,7 +139,7 @@ h4 {
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--gold-dim), transparent);
   border: none;
-  margin: 1rem 0;
+  margin: 1.25rem 0;
 }
 
 /* ── Buttons ────────────────────────────────────────── */
@@ -129,10 +148,10 @@ h4 {
   background: linear-gradient(135deg, var(--gold-dim), var(--gold));
   color: var(--midnight);
   font-family: "Cinzel", serif;
-  font-size: 0.75rem;
-  font-weight: 600;
+  font-size: 0.85rem; /* up from 0.75rem — was too small */
+  font-weight: 700;
   letter-spacing: 0.08em;
-  padding: 0.5rem 1.25rem;
+  padding: 0.55rem 1.4rem;
   border-radius: 2px;
   border: none;
   cursor: pointer;
@@ -143,7 +162,7 @@ h4 {
 
 .btn-gold:hover {
   background: linear-gradient(135deg, var(--gold), var(--gold-bright));
-  box-shadow: 0 0 20px rgba(201, 168, 76, 0.3);
+  box-shadow: 0 0 24px rgba(212, 168, 76, 0.4);
   transform: translateY(-1px);
 }
 
@@ -151,9 +170,9 @@ h4 {
   background: transparent;
   color: var(--text-dim);
   font-family: "Cinzel", serif;
-  font-size: 0.7rem;
+  font-size: 0.8rem; /* up from 0.7rem */
   letter-spacing: 0.08em;
-  padding: 0.4rem 1rem;
+  padding: 0.45rem 1.1rem;
   border-radius: 2px;
   border: 1px solid var(--border);
   cursor: pointer;
@@ -168,7 +187,7 @@ h4 {
 .btn-ghost.active {
   border-color: var(--gold);
   color: var(--gold);
-  background: rgba(201, 168, 76, 0.08);
+  background: rgba(212, 168, 76, 0.1);
 }
 
 /* ── Inputs ─────────────────────────────────────────── */
@@ -179,8 +198,8 @@ h4 {
   border-radius: 2px;
   color: var(--text);
   font-family: "Crimson Text", serif;
-  font-size: 1rem;
-  padding: 0.6rem 1rem;
+  font-size: 1.05rem; /* slightly bigger so text is comfortable to read */
+  padding: 0.7rem 1.1rem; /* more comfortable hit area */
   transition:
     border-color 0.2s ease,
     box-shadow 0.2s ease;
@@ -190,12 +209,13 @@ h4 {
 .oot-input::placeholder {
   color: var(--text-dim);
   font-style: italic;
+  opacity: 0.8; /* ensures placeholder is visible but distinct */
 }
 
 .oot-input:focus {
   outline: none;
-  border-color: var(--gold-dim);
-  box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.1);
+  border-color: var(--gold); /* brighter on focus for clarity */
+  box-shadow: 0 0 0 3px rgba(212, 168, 76, 0.18);
 }
 
 /* ── Progress bar ───────────────────────────────────── */
@@ -204,25 +224,25 @@ h4 {
   background: var(--deep);
   border: 1px solid var(--border);
   border-radius: 2px;
-  height: 8px;
+  height: 10px; /* up from 8px — easier to see */
   overflow: hidden;
 }
 
 .oot-progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, var(--gold-dim), var(--gold));
+  background: linear-gradient(90deg, var(--gold-dim), var(--gold-bright));
   border-radius: 2px;
   transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 0 8px rgba(201, 168, 76, 0.4);
+  box-shadow: 0 0 10px rgba(212, 168, 76, 0.5);
 }
 
 /* ── Section heading ────────────────────────────────── */
 
 .section-heading {
   font-family: "Cinzel", serif;
-  color: var(--gold);
+  color: var(--gold-bright); /* brighter gold so it pops */
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.2rem; /* up from 2rem */
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -232,24 +252,24 @@ h4 {
 .section-heading::after {
   content: "";
   display: block;
-  width: 60px;
+  width: 70px;
   height: 2px;
   background: linear-gradient(90deg, transparent, var(--gold), transparent);
-  margin: 0.75rem auto 0;
+  margin: 0.85rem auto 0;
 }
 
 /* ── Badge ──────────────────────────────────────────── */
 
 .oot-badge {
   font-family: "Cinzel", serif;
-  font-size: 0.6rem;
+  font-size: 0.7rem; /* up from 0.6rem — was barely readable */
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  padding: 0.2rem 0.6rem;
+  padding: 0.25rem 0.7rem;
   border-radius: 2px;
   border: 1px solid var(--border-bright);
-  color: var(--text-dim);
-  background: var(--deep);
+  color: var(--parchment-dim); /* much brighter than --text-dim */
+  background: var(--surface); /* slightly lighter bg for contrast */
 }
 
 /* ── Page fade transition ───────────────────────────── */
@@ -268,6 +288,6 @@ h4 {
 
 .triforce-accent {
   color: var(--gold);
-  opacity: 0.6;
-  font-size: 0.7rem;
+  opacity: 0.75; /* up from 0.6 — more visible */
+  font-size: 0.75rem;
 }
