@@ -56,16 +56,6 @@ onMounted(async () => {
         <hr class="gold-divider" />
 
         <p class="detail-description">{{ item.description }}</p>
-
-        <template v-if="item.how_to_get">
-          <h3 class="detail-subheading">How to Obtain</h3>
-          <p class="detail-body">{{ item.how_to_get }}</p>
-        </template>
-
-        <template v-if="item.effect">
-          <h3 class="detail-subheading">Effect</h3>
-          <p class="detail-body">{{ item.effect }}</p>
-        </template>
       </div>
     </template>
   </div>

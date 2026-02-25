@@ -58,16 +58,6 @@ onMounted(async () => {
         <hr class="gold-divider" />
 
         <p class="detail-description">{{ location.description }}</p>
-
-        <template v-if="location.region">
-          <h3 class="detail-subheading">Region</h3>
-          <p class="detail-body">{{ location.region }}</p>
-        </template>
-
-        <template v-if="location.notes">
-          <h3 class="detail-subheading">Notes</h3>
-          <p class="detail-body">{{ location.notes }}</p>
-        </template>
       </div>
     </template>
   </div>
