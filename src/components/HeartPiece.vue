@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { ref, computed } from "vue";
+import { ref, computed, onMounted } from "vue";
 import { RouterLink } from "vue-router";
-import locationsData from "@/data/locations.json";
+import { fetchLocations } from "@/services/api";
 import { useProgress } from "@/composables/useProgress";
 import type { HeartPiece as HeartPieceType, Location } from "@/types";
 
@@ -12,6 +12,11 @@ const props = defineProps<{
 const { isHeartPieceComplete, toggleHeartPiece } = useProgress();
 
 const showFullDescription = ref<boolean>(false);
+const allLocations = ref<Location[]>([]);
+
+onMounted(async () => {
+  allLocations.value = await fetchLocations();
+});
 
 const truncatedDescription = computed<string>(() => {
   const description = props.HeartPiece?.description;
@@ -24,7 +29,7 @@ const truncatedDescription = computed<string>(() => {
 const matchedLocation = computed<Location | undefined>(() => {
   if (!props.HeartPiece?.location) return undefined;
   const loc = props.HeartPiece.location.split(" - ")[0];
-  return locationsData.locations.find(
+  return allLocations.value.find(
     (l) =>
       loc.toLowerCase().includes(l.name.toLowerCase()) ||
       l.name.toLowerCase().includes(loc.toLowerCase()),
@@ -46,7 +51,11 @@ const isComplete = computed<boolean>(() =>
       <span class="heart-number"
         >#{{ String(HeartPiece.id).padStart(2, "0") }}</span
       >
-      <span class="heart-icon">❤️</span>
+      <img
+        src="@/assets/img/heartpiece.png"
+        alt="Heart Piece"
+        class="heart-piece"
+      />
     </div>
 
     <hr class="gold-divider" />
@@ -72,7 +81,6 @@ const isComplete = computed<boolean>(() =>
         ⟨ {{ HeartPiece.location }} ⟩
       </RouterLink>
       <span v-else class="heart-loc-text">⟨ {{ HeartPiece.location }} ⟩</span>
-      <img src="@/assets/img/heartpiece.png" alt="Token" class="heart-piece" />
 
       <div class="heart-actions">
         <button
@@ -85,7 +93,7 @@ const isComplete = computed<boolean>(() =>
         <RouterLink
           :to="'/heartpieces/' + HeartPiece.id"
           class="btn-gold"
-          style="font-size: 0.65rem; padding: 0.4rem 1rem"
+          style="font-size: 0.75rem; padding: 0.4rem 1rem"
         >
           Details
         </RouterLink>
@@ -145,15 +153,19 @@ const isComplete = computed<boolean>(() =>
 }
 
 .heart-number {
-  font-family: "Cinzel", serif;
+  font-family: var(--font-display);
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--gold);
 }
 
-.heart-icon {
-  font-size: 1.3rem;
-  filter: drop-shadow(0 0 6px rgba(200, 50, 50, 0.5));
+/* Moved image to header, made much smaller */
+.heart-piece {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 4px rgba(200, 50, 50, 0.5));
+  flex-shrink: 0;
 }
 
 .heart-body {
@@ -161,18 +173,17 @@ const isComplete = computed<boolean>(() =>
 }
 
 .heart-desc {
-  font-family: "Crimson Text", serif;
-  font-size: 1rem;
-  color: var(--text-dim);
-  line-height: 1.6;
-  font-style: italic;
+  font-family: var(--font-ui);
+  font-size: 0.9rem;
+  color: var(--text);
+  line-height: 1.7;
   margin-bottom: 0.5rem;
 }
 
 .heart-toggle {
-  font-family: "Cinzel", serif;
-  font-size: 0.6rem;
-  letter-spacing: 0.1em;
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 500;
   color: var(--gold-dim);
   background: none;
   border: none;
@@ -196,9 +207,8 @@ const isComplete = computed<boolean>(() =>
 
 .heart-loc-link,
 .heart-loc-text {
-  font-family: "Cinzel", serif;
-  font-size: 0.55rem;
-  letter-spacing: 0.06em;
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
   color: var(--text-dim);
   text-decoration: none;
   transition: color 0.2s;
@@ -220,9 +230,10 @@ const isComplete = computed<boolean>(() =>
 }
 
 .heart-collect {
-  font-family: "Cinzel", serif;
-  font-size: 0.6rem;
-  letter-spacing: 0.08em;
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   padding: 0.4rem 0.85rem;
   border-radius: 2px;

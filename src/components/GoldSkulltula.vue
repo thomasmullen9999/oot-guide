@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { ref, computed } from "vue";
+import { ref, computed, onMounted } from "vue";
 import { RouterLink } from "vue-router";
-import locationsData from "@/data/locations.json";
+import { fetchLocations } from "@/services/api";
 import { useProgress } from "@/composables/useProgress";
 import type { GoldSkulltula as GoldSkulltulaType, Location } from "@/types";
 
@@ -12,6 +12,11 @@ const props = defineProps<{
 const { isSkulltulaComplete, toggleSkulltula } = useProgress();
 
 const showFullDescription = ref<boolean>(false);
+const allLocations = ref<Location[]>([]);
+
+onMounted(async () => {
+  allLocations.value = await fetchLocations();
+});
 
 const truncatedDescription = computed<string>(() => {
   const description = props.GoldSkulltula?.description;
@@ -23,7 +28,7 @@ const truncatedDescription = computed<string>(() => {
 
 const matchedLocation = computed<Location | undefined>(() => {
   if (!props.GoldSkulltula?.location) return undefined;
-  return locationsData.locations.find(
+  return allLocations.value.find(
     (l) =>
       props.GoldSkulltula.location
         .toLowerCase()
@@ -95,7 +100,7 @@ const isComplete = computed<boolean>(() =>
         <RouterLink
           :to="'/goldskulltulas/' + GoldSkulltula.id"
           class="btn-gold"
-          style="font-size: 0.65rem; padding: 0.4rem 1rem"
+          style="font-size: 0.75rem; padding: 0.4rem 1rem"
         >
           Details
         </RouterLink>
@@ -155,17 +160,19 @@ const isComplete = computed<boolean>(() =>
 }
 
 .skulltula-number {
-  font-family: "Cinzel", serif;
+  font-family: var(--font-display);
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--gold);
   flex-shrink: 0;
 }
 
+/* Badge uses Inter — tiny Cinzel at this size is hard to read */
 .skulltula-location-badge {
-  font-family: "Cinzel", serif;
-  font-size: 0.55rem;
-  letter-spacing: 0.08em;
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--text-dim);
   background: var(--deep);
@@ -190,19 +197,19 @@ const isComplete = computed<boolean>(() =>
   padding: 0.5rem 0;
 }
 
+/* Description — Inter for legibility, no italic */
 .skulltula-desc {
-  font-family: "Crimson Text", serif;
-  font-size: 1rem;
-  color: var(--text-dim);
-  line-height: 1.6;
-  font-style: italic;
+  font-family: var(--font-ui);
+  font-size: 0.9rem;
+  color: var(--text);
+  line-height: 1.7;
   margin-bottom: 0.5rem;
 }
 
 .skulltula-toggle {
-  font-family: "Cinzel", serif;
-  font-size: 0.6rem;
-  letter-spacing: 0.1em;
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 500;
   color: var(--gold-dim);
   background: none;
   border: none;
@@ -226,9 +233,8 @@ const isComplete = computed<boolean>(() =>
 
 .skulltula-loc-link,
 .skulltula-loc-text {
-  font-family: "Cinzel", serif;
-  font-size: 0.6rem;
-  letter-spacing: 0.06em;
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
   color: var(--text-dim);
   text-decoration: none;
   transition: color 0.2s;
@@ -245,9 +251,10 @@ const isComplete = computed<boolean>(() =>
 }
 
 .skulltula-collect {
-  font-family: "Cinzel", serif;
-  font-size: 0.6rem;
-  letter-spacing: 0.08em;
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   padding: 0.4rem 0.85rem;
   border-radius: 2px;

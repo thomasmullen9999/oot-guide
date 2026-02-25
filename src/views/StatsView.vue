@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import { computed } from "vue";
+import { ref, computed, onMounted } from "vue";
 import { useProgress } from "@/composables/useProgress";
-import goldSkulltulasData from "@/data/goldskulltulas.json";
+import { fetchSkulltulas } from "@/services/api";
 import { RouterLink } from "vue-router";
+import type { GoldSkulltula } from "@/types";
 
 const {
   skulltulasCount,
@@ -13,9 +14,11 @@ const {
   resetAll,
 } = useProgress();
 
+const allSkulltulas = ref<GoldSkulltula[]>([]);
+
 const skulltulasPerLocation = computed(() => {
   const map: Record<string, { total: number; completed: number }> = {};
-  for (const s of goldSkulltulasData.goldskulltulas) {
+  for (const s of allSkulltulas.value) {
     if (!map[s.location]) map[s.location] = { total: 0, completed: 0 };
     map[s.location].total++;
     if (completedSkulltulas.value.includes(s.id)) map[s.location].completed++;
@@ -28,6 +31,10 @@ const skulltulasPerLocation = computed(() => {
 const confirmReset = () => {
   if (confirm("Reset all progress? This cannot be undone.")) resetAll();
 };
+
+onMounted(async () => {
+  allSkulltulas.value = await fetchSkulltulas();
+});
 </script>
 
 <template>

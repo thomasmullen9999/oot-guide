@@ -1,16 +1,17 @@
 import type { GoldSkulltula, HeartPiece, Location, Item } from "@/types";
+import skulltulasJson from "@/data/goldskulltulas.json";
+import heartPiecesJson from "@/data/heartpieces.json";
+import locationsJson from "@/data/locations.json";
+import itemsJson from "@/data/items.json";
 
-const BASE = "/data";
+export const fetchSkulltulas = (): Promise<GoldSkulltula[]> =>
+  Promise.resolve(skulltulasJson.goldskulltulas as GoldSkulltula[]);
 
-async function fetchJson<T>(path: string): Promise<T> {
-  const res = await fetch(`${BASE}/${path}`);
-  if (!res.ok) throw new Error(`Failed to load ${path}`);
-  return res.json() as Promise<T>;
-}
+export const fetchHeartPieces = (): Promise<HeartPiece[]> =>
+  Promise.resolve(heartPiecesJson.heartpieces as HeartPiece[]);
 
-export const fetchSkulltulas = () =>
-  fetchJson<GoldSkulltula[]>("goldskulltulas.json");
-export const fetchHeartPieces = () =>
-  fetchJson<HeartPiece[]>("heartpieces.json");
-export const fetchLocations = () => fetchJson<Location[]>("locations.json");
-export const fetchItems = () => fetchJson<Item[]>("items.json");
+export const fetchLocations = (): Promise<Location[]> =>
+  Promise.resolve(locationsJson.locations as Location[]);
+
+export const fetchItems = (): Promise<Item[]> =>
+  Promise.resolve(itemsJson.items as Item[]);

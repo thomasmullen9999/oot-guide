@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,22 +7,27 @@
   --midnight: #0a0d0f;
   --deep: #111518;
   --surface: #161c20;
-  --card: #1e2a30; /* slightly lighter for better contrast vs midnight */
+  --card: #1e2a30;
   --card-hover: #253540;
-  --border: #334a56; /* brighter border — was too dark to see */
+  --border: #334a56;
   --border-bright: #4e6e80;
-  --gold: #d4a84c; /* slightly brighter primary gold */
-  --gold-bright: #f0d070; /* more vivid highlight gold */
-  --gold-dim: #9a7a38; /* lifted dim gold so it's legible on dark bg */
-  --parchment: #f0e8cc; /* brighter parchment — was too grey */
+  --gold: #d4a84c;
+  --gold-bright: #f0d070;
+  --gold-dim: #9a7a38;
+  --parchment: #f0e8cc;
   --parchment-dim: #c8bc98;
-  --text: #dde8ee; /* brighter base text — was too dim */
-  --text-dim: #8eb4c8; /* clearer secondary text */
+  --text: #dde8ee;
+  --text-dim: #8eb4c8;
   --red: #c44848;
   --red-bright: #e86464;
   --green: #4a8f6a;
   --green-bright: #60c090;
   --triforce-glow: rgba(212, 168, 76, 0.18);
+
+  /* ── Font stacks ── */
+  --font-display: "Cinzel", serif; /* headings, nav, badges */
+  --font-body: "Crimson Text", Georgia, serif; /* long-form lore text */
+  --font-ui: "Inter", system-ui, sans-serif; /* inputs, descriptions, labels */
 }
 
 * {
@@ -36,9 +41,9 @@ html {
 body {
   background-color: var(--midnight);
   color: var(--text);
-  font-family: "Crimson Text", Georgia, serif;
-  font-size: 20px; /* up from 18px — improves general readability */
-  line-height: 1.8; /* slightly more breathing room */
+  font-family: var(--font-body);
+  font-size: 20px;
+  line-height: 1.8;
   min-height: 100vh;
   background-image:
     radial-gradient(
@@ -59,10 +64,10 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: "Cinzel", serif;
+  font-family: var(--font-display);
   letter-spacing: 0.04em;
   line-height: 1.25;
-  color: var(--parchment); /* headings now use bright parchment, not dim text */
+  color: var(--parchment);
 }
 
 h1 {
@@ -79,8 +84,33 @@ h4 {
 }
 
 p {
-  font-size: 1rem; /* ensures body copy stays at 20px baseline */
+  font-size: 1rem;
   color: var(--text);
+}
+
+/* Card descriptions — switched to Inter for legibility */
+.card-description,
+.skulltula-desc,
+.heart-desc,
+.detail-description,
+.detail-body,
+.sidebar-body,
+.list-subtitle,
+.stats-subtitle {
+  font-family: var(--font-ui);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  font-style: normal; /* override italic on Crimson Text instances */
+  color: var(--text);
+}
+
+/* Italic flavour text keeps body font but is more readable size */
+.list-subtitle,
+.stats-subtitle {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--text-dim);
 }
 
 /* ── Scrollbar ──────────────────────────────────────── */
@@ -147,8 +177,8 @@ p {
 .btn-gold {
   background: linear-gradient(135deg, var(--gold-dim), var(--gold));
   color: var(--midnight);
-  font-family: "Cinzel", serif;
-  font-size: 0.85rem; /* up from 0.75rem — was too small */
+  font-family: var(--font-display);
+  font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   padding: 0.55rem 1.4rem;
@@ -166,11 +196,17 @@ p {
   transform: translateY(-1px);
 }
 
+/* Focus visible for keyboard accessibility */
+.btn-gold:focus-visible {
+  outline: 2px solid var(--gold-bright);
+  outline-offset: 3px;
+}
+
 .btn-ghost {
   background: transparent;
   color: var(--text-dim);
-  font-family: "Cinzel", serif;
-  font-size: 0.8rem; /* up from 0.7rem */
+  font-family: var(--font-display);
+  font-size: 0.8rem;
   letter-spacing: 0.08em;
   padding: 0.45rem 1.1rem;
   border-radius: 2px;
@@ -182,6 +218,11 @@ p {
 .btn-ghost:hover {
   border-color: var(--gold-dim);
   color: var(--gold);
+}
+
+.btn-ghost:focus-visible {
+  outline: 2px solid var(--gold-bright);
+  outline-offset: 3px;
 }
 
 .btn-ghost.active {
@@ -197,9 +238,13 @@ p {
   border: 1px solid var(--border);
   border-radius: 2px;
   color: var(--text);
-  font-family: "Crimson Text", serif;
-  font-size: 1.05rem; /* slightly bigger so text is comfortable to read */
-  padding: 0.7rem 1.1rem; /* more comfortable hit area */
+
+  /* Inter for inputs — much easier to read when typing */
+  font-family: var(--font-ui);
+  font-size: 0.95rem;
+  font-weight: 400;
+
+  padding: 0.7rem 1.1rem;
   transition:
     border-color 0.2s ease,
     box-shadow 0.2s ease;
@@ -208,14 +253,21 @@ p {
 
 .oot-input::placeholder {
   color: var(--text-dim);
-  font-style: italic;
-  opacity: 0.8; /* ensures placeholder is visible but distinct */
+  opacity: 0.8;
+  font-style: normal; /* no italic on placeholder — easier to read */
 }
 
 .oot-input:focus {
   outline: none;
-  border-color: var(--gold); /* brighter on focus for clarity */
+  border-color: var(--gold);
   box-shadow: 0 0 0 3px rgba(212, 168, 76, 0.18);
+}
+
+/* Select inputs */
+.oot-input option {
+  background: var(--deep);
+  color: var(--text);
+  font-family: var(--font-ui);
 }
 
 /* ── Progress bar ───────────────────────────────────── */
@@ -224,7 +276,7 @@ p {
   background: var(--deep);
   border: 1px solid var(--border);
   border-radius: 2px;
-  height: 10px; /* up from 8px — easier to see */
+  height: 10px;
   overflow: hidden;
 }
 
@@ -239,10 +291,10 @@ p {
 /* ── Section heading ────────────────────────────────── */
 
 .section-heading {
-  font-family: "Cinzel", serif;
-  color: var(--gold-bright); /* brighter gold so it pops */
+  font-family: var(--font-display);
+  color: var(--gold-bright);
   text-align: center;
-  font-size: 2.2rem; /* up from 2rem */
+  font-size: 2.2rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -261,15 +313,30 @@ p {
 /* ── Badge ──────────────────────────────────────────── */
 
 .oot-badge {
-  font-family: "Cinzel", serif;
-  font-size: 0.7rem; /* up from 0.6rem — was barely readable */
-  letter-spacing: 0.1em;
+  font-family: var(
+    --font-ui
+  ); /* Inter — tiny Cinzel at 0.7rem is hard to read */
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   padding: 0.25rem 0.7rem;
   border-radius: 2px;
   border: 1px solid var(--border-bright);
-  color: var(--parchment-dim); /* much brighter than --text-dim */
-  background: var(--surface); /* slightly lighter bg for contrast */
+  color: var(--parchment-dim);
+  background: var(--surface);
+}
+
+/* ── Result / label text ────────────────────────────── */
+
+/* Small uppercase labels — keep display font but bump size */
+.result-count,
+.progress-label-text,
+.progress-label-count,
+.breakdown-fraction {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
 }
 
 /* ── Page fade transition ───────────────────────────── */
@@ -288,6 +355,47 @@ p {
 
 .triforce-accent {
   color: var(--gold);
-  opacity: 0.75; /* up from 0.6 — more visible */
+  opacity: 0.75;
   font-size: 0.75rem;
+}
+
+/* ── Accessibility ──────────────────────────────────── */
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Skip to main content link for screen readers */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  background: var(--gold);
+  color: var(--midnight);
+  font-family: var(--font-ui);
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 2px;
+  z-index: 9999;
+  transition: top 0.2s;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* Ensure all interactive elements have visible focus */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--gold-bright);
+  outline-offset: 2px;
 }

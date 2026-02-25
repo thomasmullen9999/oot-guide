@@ -56,26 +56,29 @@ onMounted(loadLocations);
           type="text"
           class="oot-input"
           placeholder="Search locations..."
+          aria-label="Search locations"
         />
       </div>
 
       <!-- Loading -->
-      <div v-if="isLoading" class="state-block">
+      <div v-if="isLoading" class="state-block" aria-busy="true">
         <div class="spinner"></div>
         <p>Searching Hyrule...</p>
       </div>
 
       <!-- Error -->
-      <div v-else-if="error" class="state-block state-block--error">
+      <div
+        v-else-if="error"
+        class="state-block state-block--error"
+        role="alert"
+      >
         {{ error }}
       </div>
 
       <!-- Grid -->
       <template v-else>
-        <p class="result-count">
-          {{ locations.length }} location{{
-            locations.length !== 1 ? "s" : ""
-          }}
+        <p class="result-count" aria-live="polite">
+          {{ locations.length }} location{{ locations.length !== 1 ? "s" : "" }}
           found
         </p>
         <div v-if="locations.length > 0" class="cards-grid">
@@ -107,8 +110,9 @@ onMounted(loadLocations);
 }
 
 .list-subtitle {
-  font-family: "Crimson Text", serif;
+  font-family: var(--font-body);
   font-style: italic;
+  font-size: 1.05rem;
   color: var(--text-dim);
   text-align: center;
   margin-bottom: 2.5rem;
@@ -119,9 +123,9 @@ onMounted(loadLocations);
 }
 
 .result-count {
-  font-family: "Cinzel", serif;
-  font-size: 0.6rem;
-  letter-spacing: 0.1em;
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--text-dim);
   text-align: center;
@@ -138,9 +142,8 @@ onMounted(loadLocations);
   text-align: center;
   padding: 5rem 0;
   color: var(--text-dim);
-  font-family: "Crimson Text", serif;
-  font-style: italic;
-  font-size: 1.1rem;
+  font-family: var(--font-ui);
+  font-size: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -1,39 +1,170 @@
-<script setup>
-import { ref, onMounted } from "vue";
+<script setup lang="ts">
+import { ref, onMounted, computed } from "vue";
 import { useRoute, RouterLink } from "vue-router";
-import itemsData from "@/data/items.json";
+import { fetchItems } from "@/services/api";
+import type { Item } from "@/types";
 
 const route = useRoute();
-const item = ref(null);
+const allItems = ref<Item[]>([]);
+const isLoading = ref<boolean>(true);
+const error = ref<string | null>(null);
 
-onMounted(() => {
-  const id = parseInt(route.params.id);
-  item.value = itemsData.items.find((i) => i.id === id);
+const item = computed(() =>
+  allItems.value.find((i) => i.id === Number(route.params.id)),
+);
+
+onMounted(async () => {
+  try {
+    allItems.value = await fetchItems();
+  } catch (e) {
+    error.value = "Failed to load item.";
+    console.error(e);
+  } finally {
+    isLoading.value = false;
+  }
 });
 </script>
 
 <template>
-  <section class="bg-blue-50 py-10 px-4" v-if="item">
-    <div class="container m-auto max-w-2xl">
-      <RouterLink
-        to="/items"
-        class="text-blue-500 hover:text-blue-600 flex items-center gap-1 mb-6"
-      >
-        &larr; Back to Items
-      </RouterLink>
-      <div class="bg-white rounded-xl shadow-md p-6">
-        <div class="flex items-center justify-between mb-2">
-          <h1 class="text-2xl font-bold">{{ item.name }}</h1>
-          <span
-            class="text-sm bg-blue-100 text-blue-700 rounded-full px-3 py-1"
-            >{{ item.category }}</span
-          >
-        </div>
-        <p class="text-gray-600 leading-relaxed mt-4">{{ item.description }}</p>
-      </div>
+  <div class="view-wrapper">
+    <RouterLink to="/items" class="back-link">← Back to Items</RouterLink>
+
+    <!-- Loading -->
+    <div v-if="isLoading" class="state-block">
+      <div class="spinner"></div>
+      <p>Searching Hyrule...</p>
     </div>
-  </section>
-  <section v-else class="text-center py-20 text-gray-500">
-    Item not found.
-  </section>
+
+    <!-- Error -->
+    <div v-else-if="error" class="state-block state-block--error">
+      {{ error }}
+    </div>
+
+    <!-- Not found -->
+    <div v-else-if="!item" class="state-block state-block--error">
+      Item not found.
+    </div>
+
+    <!-- Content -->
+    <template v-else>
+      <div class="oot-card detail-card">
+        <div class="item-header">
+          <h1 class="detail-title">{{ item.name }}</h1>
+          <span class="oot-badge">{{ item.category }}</span>
+        </div>
+
+        <hr class="gold-divider" />
+
+        <p class="detail-description">{{ item.description }}</p>
+
+        <template v-if="item.how_to_get">
+          <h3 class="detail-subheading">How to Obtain</h3>
+          <p class="detail-body">{{ item.how_to_get }}</p>
+        </template>
+
+        <template v-if="item.effect">
+          <h3 class="detail-subheading">Effect</h3>
+          <p class="detail-body">{{ item.effect }}</p>
+        </template>
+      </div>
+    </template>
+  </div>
 </template>
+
+<style scoped>
+.view-wrapper {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.back-link {
+  font-family: "Cinzel", serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: var(--text-dim);
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 2rem;
+  transition: color 0.2s ease;
+}
+
+.back-link:hover {
+  color: var(--gold);
+}
+
+.detail-card {
+  padding: 2rem;
+}
+
+.item-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.detail-title {
+  font-family: "Cinzel", serif;
+  font-size: 1.75rem;
+  color: var(--parchment);
+}
+
+.detail-description {
+  font-family: "Crimson Text", serif;
+  font-size: 1.1rem;
+  color: var(--text);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.detail-subheading {
+  font-family: "Cinzel", serif;
+  font-size: 0.85rem;
+  color: var(--gold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.detail-body {
+  font-family: "Crimson Text", serif;
+  font-size: 1.05rem;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+}
+
+.state-block {
+  text-align: center;
+  padding: 5rem 0;
+  color: var(--text-dim);
+  font-family: "Crimson Text", serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.state-block--error {
+  color: var(--red-bright);
+}
+
+.spinner {
+  width: 32px;
+  height: 32px;
+  border: 2px solid var(--border);
+  border-top-color: var(--gold);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+</style>
